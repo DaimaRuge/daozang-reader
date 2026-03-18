@@ -8,6 +8,7 @@ export default defineConfig({
   base: '/',
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,  // 忽略死链接（经文内容逐步完善）
   
   // 主题配置
   themeConfig: {
