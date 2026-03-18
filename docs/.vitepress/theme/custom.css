@@ -1,0 +1,254 @@
+/* 道藏阅读平台 - 自定义样式 */
+
+:root {
+  /* 配色方案 - 水墨风格 */
+  --vp-c-brand-1: #8b4513;      /* 赭石色 */
+  --vp-c-brand-2: #a0522d;      /* 褐色 */
+  --vp-c-brand-3: #cd853f;      /* 秘鲁色 */
+  --vp-c-brand-soft: rgba(139, 69, 19, 0.14);
+  
+  /* 背景色 */
+  --vp-c-bg: #faf8f5;           /* 宣纸色 */
+  --vp-c-bg-alt: #f5f3f0;       /* 淡米色 */
+  --vp-c-bg-elv: #ffffff;       /* 纯白 */
+  
+  /* 文字色 */
+  --vp-c-text-1: #2c3e50;       /* 墨色 */
+  --vp-c-text-2: #5a6c7d;       /* 灰墨 */
+  --vp-c-text-3: #8795a1;       /* 浅灰 */
+  
+  /* 边框色 */
+  --vp-c-border: #e0d8c8;       /* 淡黄褐 */
+  --vp-c-divider: #d4c8b0;      /* 黄褐 */
+  
+  /* 字体 */
+  --vp-font-family-base: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', serif;
+  --vp-font-family-mono: 'Fira Code', monospace;
+}
+
+/* 标题字体 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  border-bottom-color: var(--vp-c-divider);
+}
+
+/* 段落优化 */
+.vp-doc p {
+  line-height: 1.8;
+  margin: 1.2em 0;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+/* 首页特殊样式 */
+.VPHero .name {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 4rem !important;
+  background: linear-gradient(135deg, #8b4513, #cd853f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.VPHero .tagline {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.5rem !important;
+  color: var(--vp-c-text-2);
+}
+
+/* 侧边栏优化 */
+.VPSidebar .group {
+  font-family: 'Noto Serif SC', serif;
+}
+
+.VPSidebar .title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 导航栏优化 */
+.VPNav {
+  font-family: 'Noto Serif SC', serif;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+/* 内容区优化 */
+.VPDoc .content-container {
+  max-width: 900px;
+}
+
+/* 引用块样式 */
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+/* 代码块样式 */
+.vp-doc [class*='language-'] {
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-alt);
+}
+
+/* 表格样式 */
+.vp-doc table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 1px solid var(--vp-c-border);
+  padding: 0.75rem 1rem;
+}
+
+.vp-doc tr:hover {
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* 列表样式 */
+.vp-doc ul,
+.vp-doc ol {
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+
+/* 链接样式 */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* 图片样式 */
+.vp-doc img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* 目录样式 */
+.vp-doc .VPDocOutlineItem {
+  font-family: 'Noto Serif SC', serif;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .vp-doc p {
+    text-indent: 0;
+  }
+  
+  .VPHero .name {
+    font-size: 3rem !important;
+  }
+  
+  .VPHero .tagline {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .vp-doc {
+    max-width: 100%;
+    padding: 2rem;
+  }
+  
+  .vp-doc p {
+    line-height: 2;
+    text-indent: 2em;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-soft);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* 特殊标记 - 经典标题 */
+.classic-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--vp-c-brand-1);
+  position: relative;
+}
+
+.classic-title::before,
+.classic-title::after {
+  content: '☯';
+  margin: 0 1rem;
+  opacity: 0.3;
+}
+
+/* 分类标签 */
+.category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+/* 文献卡片 */
+.scripture-card {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: var(--vp-c-bg);
+  transition: all 0.3s;
+}
+
+.scripture-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.scripture-card h3 {
+  margin-top: 0;
+  border-bottom: none;
+}
+
+.scripture-card .meta {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.5rem;
+}

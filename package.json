@@ -1,0 +1,19 @@
+{
+  "name": "daozang-reader",
+  "version": "1.0.0",
+  "description": "道藏在线阅读网站 - Online Daozang Reading Platform",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaimaRuge/daozang-reader.git"
+  },
+  "author": "DaimaRuge",
+  "license": "MIT"
+}
