@@ -29,7 +29,10 @@ export default defineConfig({
         { text: '正一部', link: '/catalog/zhengyi' }
       ]},
       { text: '续道藏', link: '/catalog/xudaozang' },
-      { text: 'API', link: '/api' }
+      { text: '开发者', items: [
+        { text: 'API文档', link: '/api' },
+        { text: '部署指南', link: '/deploy' }
+      ]}
     ],
     
     // 侧边栏
