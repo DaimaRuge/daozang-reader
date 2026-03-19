@@ -394,14 +394,20 @@ word_count: {scripture.size}
                     output_dir.mkdir(parents=True, exist_ok=True)
                     with open(output_file, 'w', encoding='utf-8') as f:
                         f.write(md_content)
-                    print(f"✓ {scripture.title}")
+                    try:
+                        print(f"[OK] {scripture.title}")
+                    except:
+                        print(f"[OK] {filepath.name}")
                 
                 stats['success'] += 1
                 cat = scripture.category.split('-')[0] if '-' in scripture.category else scripture.category
                 stats['by_category'][cat] = stats['by_category'].get(cat, 0) + 1
                 
             except Exception as e:
-                print(f"✗ {filepath.name}: {e}")
+                try:
+                    print(f"[FAIL] {filepath.name}: {e}")
+                except:
+                    print(f"[FAIL] {filepath.stem}: error")
                 stats['failed'] += 1
         
         print(f"\n转换完成:")
