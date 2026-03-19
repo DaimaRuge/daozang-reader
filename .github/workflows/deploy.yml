@@ -23,8 +23,6 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 如果未启用lastUpdatedTime，则不需要
 
       - name: 设置Node.js
         uses: actions/setup-node@v4
@@ -35,7 +33,7 @@ jobs:
         run: npm install
 
       - name: 构建VitePress站点
-        run: npm run docs:build --if-present
+        run: npm run docs:build
 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
