@@ -260,7 +260,7 @@ title: {category_name}
         for author, works in sorted(by_author.items()):
             md += f'## {author}\n\n'
             for work in works:
-                md += f'- [{work.title}](/{slug}/{work.source_file.replace(".txt", "")})\n'
+                md += f'- [{work.title}](/catalog/{slug}/{work.source_file.replace(".txt", "")})\n'
             md += '\n'
         
         md += '</div>\n'
