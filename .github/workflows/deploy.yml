@@ -32,7 +32,7 @@ jobs:
           node-version: 20
 
       - name: 安装依赖
-        run: npm ci
+        run: npm install
 
       - name: 构建VitePress站点
         run: npm run docs:build --if-present
