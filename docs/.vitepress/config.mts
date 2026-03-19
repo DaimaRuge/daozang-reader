@@ -5,7 +5,7 @@ export default defineConfig({
   description: '《正统道藏》在线阅读 - 明代官修道藏全文',
   
   // 基础配置
-  base: '/',
+  base: '/daozang-reader/',
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,  // 忽略死链接（经文内容逐步完善）
