@@ -36,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: 构建VitePress站点
-        run: npm run docs:build
+        run: npm run docs:build --if-present
 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
